@@ -2,6 +2,9 @@ import os
 
 import requests
 
+import sys
+
+assert sys.version_info[0] == 3, "Python 3 please."
 
 def download_json(sess, url, output_file):
     if os.path.exists(output_file) and os.stat(output_file).st_size > 0:
